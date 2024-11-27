@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'pgsql'),
+    'default' => env('DB_CONNECTION', 'sqlite'),
 
     /*
     |--------------------------------------------------------------------------
@@ -84,12 +84,12 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => env('DB_URL', 'postgresql://task_manager_db_8xpo_user:eirechsSDaHbaArg9dBiEydU4fG0Bg4j@dpg-ct3epuij1k6c73e6qcgg-a.frankfurt-postgres.render.com:5432/task_manager_db_8xpo'),
-            'host' => env('DB_HOST', 'dpg-ct3epuij1k6c73e6qcgg-a'),
+            'url' => env('DB_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'task_manager_db_8xpo'),
-            'username' => env('DB_USERNAME', 'task_manager_db_8xpo_user'),
-            'password' => env('DB_PASSWORD', 'eirechsSDaHbaArg9dBiEydU4fG0Bg4j'),
+            'database' => env('DB_DATABASE', 'laravel'),
+            'username' => env('DB_USERNAME', 'root'),
+            'password' => env('DB_PASSWORD', ''),
             'charset' => env('DB_CHARSET', 'utf8'),
             'prefix' => '',
             'prefix_indexes' => true,
